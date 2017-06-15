@@ -1,11 +1,13 @@
 $(document).ready(function(){
-	//keyup to make it "live"
-	$(".user-input").on("keyup", function(){
+  $(".user-input").on("keyup", function(){
 
-		converter = new MarkdownWidget(".user-input", ".transformed-input");
+    converter = new MarkdownWidget(".user-input", ".transformed-input");
 
-		converted = converter.transform
+    html = converter.transform(/\*\*(.*?)\*\*/g, '**',"strong")
+    html = converter.transform(/__(.*?)__/g, '__', "strong")
+    html = converter.transform(/\*(.*?)\*/g, '*',"i")
+    html = converter.transform(/_(.*?)_/g, '_', "i")
 
-		converter.display(html)
-	})
-})
+    converter.display(html)
+  });
+});
