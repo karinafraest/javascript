@@ -3,6 +3,14 @@ var MarkdownWidget = function(input, output){
   // this.input =  _.replace(this.input, "\n", "<br>")
   this.outputDiv = $(output)
 };
+ 
+MarkdownWidget.prototype.transformAll = function(){
+	  html = converter.transform(/\*\*(.*?)\*\*/g, '**',"strong");
+    html = converter.transform(/__(.*?)__/g, '__', "strong");
+    html = converter.transform(/\*(.*?)\*/g, '*',"i");
+    html = converter.transform(/_(.*?)_/g, '_', "i");
+    return html;
+}
 
 MarkdownWidget.prototype.transform = function(regex, trim, tag){
   var outputArrayStars = _.words(this.input, regex)
