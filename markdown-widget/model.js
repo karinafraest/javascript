@@ -1,15 +1,18 @@
 var MarkdownWidget = function(input, output){
   this.input = $(input).val()
-  // this.input =  _.replace(this.input, "\n", "<br>")
   this.outputDiv = $(output)
 };
  
 MarkdownWidget.prototype.transformAll = function(){
-		var marks = [[/\*\*(.*?)\*\*/g, '**',"strong"],[/__(.*?)__/g, '__', "strong"],[/\*(.*?)\*/g, '*',"i"], [/_(.*?)_/g, '_', "i"]]
+		var marks = [
+								[/\*\*(.*?)\*\*/g, '**',"strong"],
+								[/__(.*?)__/g, '__', "strong"],[/\*(.*?)\*/g, '*',"i"], 
+								[/_(.*?)_/g, '_', "i"]]
 	  
 	  var html = marks.forEach(function(marks){
 	  	html = converter.transform(marks[0], marks[1],marks[2])
 	  });
+	  
     return html;
 }
 
