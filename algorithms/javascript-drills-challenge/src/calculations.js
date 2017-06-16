@@ -16,3 +16,7 @@ function diagonal(rectangle){
 	var height = rectangle.height;
 	return Math.sqrt(width**2+height**2);
 }
+
+function isSquare(rectangle){
+	return rectangle.width===rectangle.height;
+}
