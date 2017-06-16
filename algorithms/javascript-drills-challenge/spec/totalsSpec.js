@@ -9,7 +9,26 @@ describe("Totals", function(){
 	describe("mean()", function(){
 		it("calculates the mean of the values in the array", function(){
 			var array = [1,2,2,5,5];
-			expect(mean(array)).toBe()
+			expect(mean(array)).toBe(3);
+		});
+	});
+
+	describe("median()", function(){
+		it("calculates the median of an even number of values in the array", function(){
+			var array = [1,2,3,4,5,6]
+			expect(median(array)).toBe(3.5)
+		});
+
+		it("calculates the median of an odd number of values in the array", function(){
+			var array = [1,2,3,4,5]
+			expect(median(array)).toBe(3)
+		});
+
+		it("calculates the median of an even number of values that are not arranged", function(){
+			var array = [6,2,5,1,4,3]
+			expect(median(array)).toBe(3.5)
 		})
-	})
+	});
+
+
 });
