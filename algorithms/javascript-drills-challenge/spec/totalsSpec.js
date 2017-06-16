@@ -1,0 +1,8 @@
+describe("Totals", function(){
+	describe("total()", function(){
+		it("sums all the values in the array", function(){
+			var array = [2,4,6,8,10];
+			expect(total(array)).toBe(30);
+		});
+	});
+});
