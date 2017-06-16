@@ -10,6 +10,7 @@ describe("calculations", function(){
       expect(area(square)).toBe(400);
     });
   });
+
  describe("perimeter()", function(){
  	it("calculates the perimeter of a rectangle", function(){
  		var rectangle = {width: 10, height: 20};
@@ -21,4 +22,17 @@ describe("calculations", function(){
  		expect(perimeter(square)).toBe(80);
  	});
  });
+
+ describe("diagonal()", function(){
+ 	it("calculates the legth of a rectangle's diagonal", function(){
+ 		var rectangle = {width: 10, height: 20};
+ 		expect(diagonal(rectangle)).toBe(22.360679774997898);
+ 	});
+
+ 	it("calculates the legth of a square's diagonal", function(){
+ 		var square = {width: 20, height: 20};
+ 		expect(diagonal(square)).toBe(28.284271247461902)
+ 	});
+ });
+
 });
