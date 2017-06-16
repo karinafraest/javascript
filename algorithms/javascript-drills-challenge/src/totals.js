@@ -21,3 +21,25 @@ function median(array){
 	};
 	return median;
 }
+
+function mode(array){
+	array.sort();
+	var duplicates = {};
+	var mostCommon = 0; /*asume it is the first one until proven otherwise */
+	var modeNumbers = [];
+	array.forEach(function(number){
+		if(!(number in duplicates)){
+			duplicates[number] = 0;
+		};
+
+		duplicates[number] ++;
+
+		if(duplicates[number] == mostCommon){
+			modeNumbers.push(duplicates[number]);
+		} else if (duplicates[number]> mostCommon){
+			mostCommon = duplicates[number];
+			modeNumbers = [number];
+		};
+	});
+	return modeNumbers;
+};

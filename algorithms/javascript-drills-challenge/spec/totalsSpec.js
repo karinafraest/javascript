@@ -33,7 +33,7 @@ describe("Totals", function(){
 	describe("mode()", function(){
 		it("returns an object representing the mode(s) of the array with the property being the mode and the value being the frequency", function(){
 			var array = [1,2,3,2,5];
-			expect(mode(array)).toBe([20]);
+			expect(mode(array)).toEqual([2]);
 		});
 	});
 });
