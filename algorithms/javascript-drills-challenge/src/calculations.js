@@ -10,3 +10,9 @@ function perimeter(rectangle){
 	var perimeter = (width*2) + (height*2);
 	return perimeter;
 }
+
+function diagonal(rectangle){
+	var width = rectangle.width;
+	var height = rectangle.height;
+	return Math.sqrt(width**2+height**2);
+}
