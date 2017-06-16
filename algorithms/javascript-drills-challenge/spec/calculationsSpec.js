@@ -35,4 +35,16 @@ describe("calculations", function(){
  	});
  });
 
+ describe ("isSquare()", function(){
+ 	it("returns true if the rectangle is a square", function(){
+ 		var square = {width: 20, height: 20};
+ 		expect(isSquare(square)).toBe(true);
+ 	});
+
+ 	it("returns false if the rectangle is not a square", function(){
+ 		var rectangle = {width: 10, height: 20};
+ 		expect(isSquare(rectangle)).toBe(false);
+ 	});
+ });
+
 });
