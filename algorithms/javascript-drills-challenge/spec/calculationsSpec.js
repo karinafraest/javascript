@@ -12,14 +12,13 @@ describe("calculations", function(){
   });
  describe("perimeter()", function(){
  	it("calculates the perimeter of a rectangle", function(){
- 		var rectangle = {width: 10, heigth: 20};
+ 		var rectangle = {width: 10, height: 20};
  		expect(perimeter(rectangle)).toBe(60);
  	});
 
  	it("calculates the perimeter of a square", function(){
- 		var square = {width: 20, heigth: 20};
+ 		var square = {width: 20, height: 20};
  		expect(perimeter(square)).toBe(80);
  	});
  });
-
 });

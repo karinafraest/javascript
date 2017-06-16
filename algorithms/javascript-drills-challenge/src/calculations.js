@@ -4,3 +4,9 @@ function area(rectangle){
 	return width*height;
 }
 
+function perimeter(rectangle){
+	var width = rectangle.width;
+	var height = rectangle.height;
+	var perimeter = (width*2) + (height*2);
+	return perimeter;
+}
