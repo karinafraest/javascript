@@ -8,7 +8,7 @@ describe("count between", function(){
 
 	it("returns 0 if the array is empty", function(){
 		var array = []
-		expect(countBetween(array, 3, 5));
+		expect(countBetween(array, 3, 5)).toBe(0);
 	});
 
 	it("returns 0 if the upperBound is smaller than the lowerBound", function(){
