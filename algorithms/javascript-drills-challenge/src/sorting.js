@@ -13,3 +13,21 @@ function bubbleSort(array){
 	};
 	return array;
 };
+
+
+function insertionSort(array){
+	var unsorted = array.slice(0);
+	var sorted = [];
+	var smallest;
+	while(sorted.length < array.length){
+		smallest = unsorted[0]; /*asume it is the first*/
+		for(var i = 0; i< unsorted.length; i++){
+			if(smallest > unsorted[i]){
+				smallest = unsorted[i];
+			};
+		};
+	sorted.push(smallest);
+	unsorted.splice(unsorted.indexOf(smallest),1); /*delete smallest from unsorted*/
+	};	
+	return sorted;
+};
