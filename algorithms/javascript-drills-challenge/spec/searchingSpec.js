@@ -9,6 +9,7 @@ describe("Searching", function(){
 		it("returns false if the element is not in the array", function(){
 			var item = 9;
 			var array = [1,2,3,4,5,6,7];
+			expect(search(array,item)).toBe(false);
 		});
 	});
 })
