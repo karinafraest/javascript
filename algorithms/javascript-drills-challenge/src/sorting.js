@@ -14,18 +14,22 @@ function bubbleSort(array){
 	return array;
 };
 
+function findSmallest(array){
+	smallest = array[0]; /*asume it is the first*/
+		for(var i = 0; i< array.length; i++){
+			if(smallest > array[i]){
+				smallest = array[i];
+			};
+		};
+	return smallest
+};
 
 function insertionSort(array){
 	var unsorted = array.slice(0);
 	var sorted = [];
 	var smallest;
 	while(sorted.length < array.length){
-		smallest = unsorted[0]; /*asume it is the first*/
-		for(var i = 0; i< unsorted.length; i++){
-			if(smallest > unsorted[i]){
-				smallest = unsorted[i];
-			};
-		};
+		smallest = findSmallest(unsorted)
 	sorted.push(smallest);
 	unsorted.splice(unsorted.indexOf(smallest),1); /*delete smallest from unsorted*/
 	};	
